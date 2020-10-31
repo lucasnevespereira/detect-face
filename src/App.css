@@ -7,6 +7,41 @@
   justify-content: center;
 }
 
+.nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  .App {
+    margin: 0 auto;
+  }
+
+  .nav {
+    flex-direction: column;
+  }
+  .signin {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    width: 80% !important;
+  }
+
+  .register {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    width: 80% !important;
+  }
+
+  .link {
+    font-size: 16px !important;
+    padding: 0 !important;
+  }
+
+  .nav p {
+    margin-right: 5px;
+  }
+}
+
 .header {
   width: 100%;
   display: flex;
@@ -21,4 +56,7 @@
   bottom: 0;
   left: 0;
   z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
 }

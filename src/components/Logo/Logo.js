@@ -11,7 +11,7 @@ const Logo = () => {
         options={{ max: 55 }}
         style={{ height: 150, width: 150 }}
       >
-        <div className="Tilt-inner pa3">
+        <div className="logo Tilt-inner pa3">
           <img style={{ paddingTop: "5px" }} src={face} alt="logo" />
         </div>
       </Tilt>

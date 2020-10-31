@@ -3,7 +3,7 @@ import React from "react";
 const Navigation = ({ onRouteChange, isSignedIn }) => {
   if (isSignedIn) {
     return (
-      <nav style={{ display: "flex", justifyContent: "flex-end" }}>
+      <nav className="nav">
         <p
           // empty function so that onRouteChange only changes onClick
           onClick={() => onRouteChange("signout")}
@@ -15,7 +15,7 @@ const Navigation = ({ onRouteChange, isSignedIn }) => {
     );
   } else {
     return (
-      <nav style={{ display: "flex", justifyContent: "flex-end" }}>
+      <nav className="nav">
         <p
           // empty function so that onRouteChange only changes onClick
           onClick={() => onRouteChange("signin")}

@@ -3,8 +3,8 @@ import React from "react";
 const Rank = () => {
   return (
     <div>
-      <div className="white f3">
-        {"Lucas, you have detected faces in #5 pictures"}
+      <div className="center white f3">
+        {"Hello User, you have used this app # times"}
       </div>
     </div>
   );

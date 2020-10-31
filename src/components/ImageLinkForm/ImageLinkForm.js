@@ -4,8 +4,8 @@ import "./ImageLinkForm.css";
 const ImageLinkForm = ({ onInputChange, onButtonSubmit }) => {
   return (
     <div>
-      <p className="f3">
-        {"Let's see how many faces you have in your picture"}
+      <p className="center f3">
+        {"Enter a link of your image and let us detect a face in it.."}
       </p>
       <div className="center">
         <div className="form center pa4 br3 shadow-5">
