@@ -4,6 +4,7 @@ import Logo from "./components/Logo/Logo";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import Rank from "./components/Rank/Rank";
 import Particles from "react-particles-js";
+import { Component } from "react";
 
 const particlesOptions = {
   particles: {
@@ -17,20 +18,35 @@ const particlesOptions = {
   },
 };
 
-function App() {
-  return (
-    <div className="App">
-      <Particles className="particles" params={particlesOptions} />
+class App extends Component {
+  state = { input: "" };
 
-      <div className="header">
-        <Logo />
-        <Navigation />
+  onInputChange = (event) => {
+    console.log(event);
+  };
+
+  onButtonSubmit = () => {
+    console.log("click");
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <Particles className="particles" params={particlesOptions} />
+
+        <div className="header">
+          <Logo />
+          <Navigation />
+        </div>
+        <Rank />
+        <ImageLinkForm
+          onButtonSubmit={this.onButtonSubmit}
+          onInputChange={this.onInputChange}
+        />
+        {/* FaceRecognition */}
       </div>
-      <Rank />
-      <ImageLinkForm />
-      {/* FaceRecognition */}
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
