@@ -21,8 +21,9 @@ class Signin extends React.Component {
       }),
     })
       .then((response) => response.json())
-      .then((data) => {
-        if (data === "success") {
+      .then((user) => {
+        if (user.id) {
+          this.props.loadUser(user);
           this.props.onRouteChange("home");
         }
       });
@@ -32,7 +33,7 @@ class Signin extends React.Component {
     const { onRouteChange } = this.props;
     return (
       <main className="signin pa4 black-80 br3 shadow-3 w-50 center">
-        <form className="measure center">
+        <div className="measure center">
           <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
             <legend className="f4 fw6 ph0 mh0">Sign In</legend>
             <div className="mt3">
@@ -72,7 +73,7 @@ class Signin extends React.Component {
               </a>
             </div>
           </fieldset>
-        </form>
+        </div>
       </main>
     );
   }

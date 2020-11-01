@@ -1,10 +1,10 @@
 import React from "react";
 
-const Rank = () => {
+const Rank = ({ name, entries }) => {
   return (
     <div>
       <div className="center white f3">
-        {"Hello User, you have used this app # times"}
+        {`Hello ${name}, your current entry count is #${entries} ..`}
       </div>
     </div>
   );
