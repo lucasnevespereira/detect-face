@@ -36,9 +36,10 @@ class App extends Component {
   };
 
   componentDidMount() {
-    fetch("http://localhost:5000")
+    console.log("Comp Moutend");
+    fetch("http://localhost:5000/")
       .then((response) => response.json())
-      .then(console.log);
+      .then((data) => console.log(data));
   }
 
   calculateFaceLocation = (data) => {
